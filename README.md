@@ -45,4 +45,22 @@ MiniGPT_Project/
 
 학습이 완료된 후, inference.py를 실행하여 모델이 생성하는 텍스트를 확인합니다.
 
-### 5. 학습 결과 및 성능
+## 6. 학습 결과 (Training Results)
+
+아래는 Google Colab (Tesla T4 GPU) 환경에서 해리포터 전권(약 620만 자)을 학습시킨 결과입니다
+
+### 성능 지표 (Metrics)
+| 구분 | 결과 값 | 비고 |
+| :--- | :--- | :--- |
+| **Dataset** | Harry Potter Complete Series (Books 1-7) | 약 620만 Characters |
+| **Epochs** | 1 Epoch | 18,215 Steps |
+| **Training Time** | **48분 27초** | Tesla T4 + AMP 적용 |
+| **Train Loss** | 11.00 → **2.67** | 초기 대비 대폭 감소 (학습 성공) |
+| **Perplexity** | 549.08 | (Validation Set 기준) |
+
+### 💬 텍스트 생성 결과 (Generated Text Sample)
+학습된 모델은 해리포터 특유의 문체와 고유명사(Harry, Emerald flames 등)를 정확하게 학습하여 문맥에 맞는 문장을 생성했습니다.
+
+> **Prompt:** "Look. There's someone coming!"
+>
+> **Generated:** "Harry spun around. The book was staring at the fire, the book was reflecting the emerald flames and glaring at it. It was time for bed." He had tried to stop there," he said. "I..."
