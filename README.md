@@ -41,7 +41,7 @@ MiniGPT_Project/
 ├── train.py                         # 학습 실행 (Mixed Precision 적용)
 └── inference.py                     # 텍스트 생성 테스트
 ```
-# 학습이 완료되면 'minigpt_final_weights.pth' 파일이 생성됩니다.
+#### 학습이 완료되면 'minigpt_final_weights.pth' 파일이 생성됩니다.
 
 학습이 완료된 후, inference.py를 실행하여 모델이 생성하는 텍스트를 확인합니다.
 
