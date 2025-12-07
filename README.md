@@ -23,22 +23,26 @@
 | **프레임워크** | PyTorch 2.0 이상 |
 | **패키지** | tiktoken, tqdm, numpy, matplotlib |
 
-4. 프로젝트 구조 (Project Structure)
+### 4. 프로젝트 구조 (Project Structure)
 
+```text
+MiniGPT_Project/
 ├── HarryPotter/
-│   ├── 01_Harry_Potter_...txt (해리포터 1~7권 텍스트 파일)
-│   └── combined_harry_potter.txt (자동 생성됨)
+│   ├── 01_Harry_Potter_...txt       # 원본 소설 텍스트 (1~7권)
+│   └── combined_harry_potter.txt    # (자동 생성) 전체 병합 파일
+│
 ├── src/
 │   ├── __init__.py
-│   ├── utils.py (데이터 병합, 정제, 시각화)
-│   ├── dataset.py (GPTDataset 클래스)
-│   └── model.py (MiniGPT 모델 아키텍처)
-├── config.py (하이퍼파라미터 설정)
-├── train.py (학습 실행 스크립트)
-└── inference.py (모델 추론 및 텍스트 생성 스크립트)
+│   ├── utils.py                     # 데이터 병합, 정제, 시각화 유틸리티
+│   ├── dataset.py                   # PyTorch Dataset 및 토크나이징 처리
+│   └── model.py                     # MiniGPT 모델 아키텍처 (Decoder-only)
+│
+├── config.py                        # 하이퍼파라미터 및 경로 설정
+├── train.py                         # 학습 실행 (Mixed Precision 적용)
+└── inference.py                     # 텍스트 생성 테스트
 
 # 학습이 완료되면 'minigpt_final_weights.pth' 파일이 생성됩니다.
 
 학습이 완료된 후, inference.py를 실행하여 모델이 생성하는 텍스트를 확인합니다.
 
-5. 학습 결과 및 성능
+### 5. 학습 결과 및 성능
